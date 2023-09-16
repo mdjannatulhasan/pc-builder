@@ -1,4 +1,6 @@
+import RootLayout from '@/components/Layouts/RootLayout';
 import Head from 'next/head';
+import { ReactElement } from 'react';
 
 export default function Home() {
     return (
@@ -10,3 +12,7 @@ export default function Home() {
         </>
     );
 }
+
+Home.getLayout = function getLayout(page: ReactElement) {
+    return <RootLayout>{page}</RootLayout>;
+};
